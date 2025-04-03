@@ -43,6 +43,15 @@ bool avoid_collisions
 # Specify additional constraints to be met by the Cartesian path
 Constraints path_constraints
 
+# Offset of the tip from the end effector, if any
+geometry_msgs/Pose offset
+
+# Time Parameterization or not. 
+# If true, the trajectory will be time parameterized with velocity and acceleration limits.
+# In this case, the retruned trajectory can be executed directly.
+# If false, the trajectory is a path that only contains waypoints.
+bool time_parameterization
+
 ---
 
 # The state at which the computed path starts
